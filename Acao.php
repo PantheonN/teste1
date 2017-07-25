@@ -6,7 +6,7 @@ include('functions/dbconnect.php');
 
 
 $sql="SELECT * From farmacia WHERE ID=$Valor";
-if ($result=mysqli_query($conection,$sql))
+if ($result=mysqli_query($conn,$sql))
   {
   while ($row=mysqli_fetch_row($result))
     {
@@ -17,5 +17,5 @@ if ($result=mysqli_query($conection,$sql))
 	echo "<a href='alterar.php?id=$id'>Alterar Dados?</a><br>";
 	mysqli_free_result($result);
 	}
-mysqli_close($conection);
+mysqli_close($conn);
 ?>
