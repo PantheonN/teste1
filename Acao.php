@@ -1,11 +1,11 @@
 <?php
 $Valor=$_GET['id'];
-$conection=mysqli_connect("localhost","root","","base1");
-if (mysqli_connect_errno())
-  {
-  echo "Erro ao Conectar: " . mysqli_connect_error();
-  }
-$sql="SELECT * From utilizador WHERE ID=$Valor";
+
+
+include('functions/dbconnect.php');
+
+
+$sql="SELECT * From farmacia WHERE ID=$Valor";
 if ($result=mysqli_query($conection,$sql))
   {
   while ($row=mysqli_fetch_row($result))

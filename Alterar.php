@@ -1,10 +1,10 @@
 <?php
 $ID=$_GET['id'];
-$conn=mysqli_connect("localhost","root","","base1");
-if (mysqli_connect_errno())
-  {
-  echo "Erro ao Conectar: " . mysqli_connect_error();
-  }
+
+
+include('functions/dbconnect.php');
+
+
 $sql="SELECT * From utilizador WHERE ID=$ID";
 if ($result=mysqli_query($conn,$sql))
   {
