@@ -2,6 +2,8 @@
 
 <?php
 include('functions/dbconnect.php');
+
+
 $sql="SELECT * From farmacia";
 
 if ($result=mysqli_query($conn,$sql))
